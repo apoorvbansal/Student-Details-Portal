@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home</title>
+<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="css/main.css">
+	  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+	
+	<script src="javascript/main.js">
+	</script>    
+</head>
+<body onload="date()">
+	<div class="jumbotron text-center">
+		<p align="right">Date: <span id="datetime"></span></p>
+		<h1>Student Details Portal</h1>
+	</div>
+	<div class ="container-fluid">
+		<form id="form1">
+		  	<table align="center">
+				<tr>
+					<td>
+					<label for="firstname">Name: </label>
+					<input type="text" id="firstname" name="firstname" placeholder="Enter First Name" class="form-control" size="20" required />&emsp;&emsp; 
+					</td>
+					<td> 
+					<label for="tel">Roll No: </label>  
+					<input type="number" id="tel" name="tel" pattern="\d{10}" placeholder="Enter roll no." class="form-control"  size="20" required />&emsp;&emsp;  
+					</td>
+					<td>  
+					<label for="stream">Stream: </label> 
+					<input type="text" id="stream" name="stream" placeholder="Enter Stream" size="20"class="form-control"  required />&emsp;&emsp;
+					</td>
+					<td>
+					<label for="tel">Passout Year: </label> 
+					<input type="number" id="tell" name="tel" pattern="\d{4}" placeholder="Enter passout year" size="20" class="form-control" required />&emsp;&emsp;
+					</td>
+					<td>
+					<input type="button" class="btn btn-primary" onclick="return add_row();" value="Add Student">&emsp;&emsp;
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br><br>
+	<div class="jumbotron text-center">
+		<a href="#demo" class="btn btn-info" data-toggle="collapse">Show Student Details</a>
+		<div id="demo" class="collapse"><br>
+			<table class="table table-hover" id="data_table">
+				<tr>
+					<th></th>
+					<th><center>Name</center></th>
+					<th><center>Roll Number</center></th>
+					<th><center>Stream</center></th>
+					<th><center>Passout year</center></th>
+				</tr>
+				<tr id="row1">
+					<td><input type="checkbox" id="1" class="chk"></td>
+					<td id="fname_row1">abc</td>
+					<td id="roll_row1">1</td>
+					<td id="stream_row1">cse</td>
+					<td id="pass_row1">2016</td>
+					<td>
+					<input type="button" id="edit_button1" value="Edit" class="btn btn-info" onclick="edit_row('1')">
+					<input type="button" id="save_button1" value="Save" class="btn btn-success"  onclick="save_row('1')">
+					</td>
+				</tr>
+				<tr id="row2">
+					<td><input type="checkbox" id="2" class="chk"></td>
+					<td id="fname_row2">def</td>
+					<td id="roll_row2">2</td>
+					<td id="stream_row2">mech</td>
+					<td id="pass_row2">2017</td>
+					<td>
+					<input type="button" id="edit_button2" value="Edit" class="btn btn-info" onclick="edit_row('2')">
+					<input type="button" id="save_button2" value="Save" class="btn btn-success" onclick="save_row('2')">
+					</td>
+				</tr>
+				<tr id="row3">
+					<td><input type="checkbox" id="3" class="chk"></td>
+					<td id="fname_row3">xyz</td>
+					<td id="roll_row3">3</td>
+					<td id="stream_row3">HM</td>
+					<td id="pass_row3">2018</td>
+					<td>
+					<input type="button" id="edit_button3" value="Edit" class="btn btn-info" onclick="edit_row('3')">
+					<input type="button" id="save_button3" value="Save" class="btn btn-success" onclick="save_row('3')">
+					</td>
+				</tr>
+			</table>
+			<input type="button" value="Delete" class="btn btn-danger" onclick="deletes()" align="right">	
+		</div>
+	</div>
+</body>
+</html>
