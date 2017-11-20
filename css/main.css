@@ -1,0 +1,36 @@
+h1 
+	{
+		font-family: "Cooper Black";
+		font-weight: bold;
+		font-stretch: expanded;
+		font-size: 150%;
+		
+	}
+	
+label
+	{
+		font-family: "Georgia";
+		font-weight: bold;
+		font-stretch: normal;
+	}
+	
+input
+	{
+		font-family: "Serif";
+		font-weight: normal;
+		font-stretch: expanded;
+	}
+	
+table
+	{
+		font-family: "monospace";
+		font-weight: normal;
+		font-stretch: expanded;
+	}
+	
+span
+	{
+		font-family: "Georgia";
+		font-weight: normal;
+		font-stretch: normal;
+	}
